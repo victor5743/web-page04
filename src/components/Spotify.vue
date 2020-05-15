@@ -2,9 +2,9 @@
 	<div class="flex flex-col h-screen">
 		<div class="bg-blue-500 flex-1 flex overflow-y-hidden">
 			<Sidebar />
-			<div class="bg-purple-500 w-full overflow-y-auto">Content</div>
+			<div class="w-full overflow-y-auto bg-second">Content</div>
 		</div>
-		<div class="bg-red-500">Bottom</div>
+		<div class="bg-third">Bottom</div>
 	</div>
 </template>
 

@@ -1,5 +1,5 @@
 <template>
-	<div class="font-roboto tracking-wide" id="app">
+	<div class="font-roboto tracking-wide text-gray-400" id="app">
 		<Spotify />
 	</div>
 </template>
