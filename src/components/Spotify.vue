@@ -4,20 +4,22 @@
 			<Sidebar />
 			<div class="w-full overflow-y-auto bg-second">Content</div>
 		</div>
-		<div class="bg-third">Bottom</div>
+		<div class="bg-third">
+			<Bottom />
+		</div>
 	</div>
 </template>
 
 <script>
 import Sidebar from './Sidebar.vue';
+import Bottom from './Bottom.vue';
 // import Content from './Content.vue';
-// import Bottom from './Bottom.vue';
 
 export default {
 	components: {
 		Sidebar,
+		Bottom,
 		// Content,
-		// Bototom,
 	},
 };
 </script>
