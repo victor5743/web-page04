@@ -10,6 +10,9 @@ module.exports = {
 			fontFamily: {
 				roboto: ['Roboto'],
 			},
+			spacing: {
+				'112': '28rem',
+			},
 		},
 	},
 	variants: {},

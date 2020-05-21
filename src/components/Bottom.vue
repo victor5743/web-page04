@@ -1,5 +1,6 @@
 <template>
 	<div class="flex-none h-16 px-4 flex items-center justify-between">
+		<!-- Song section -->
 		<div class="flex items-center">
 			<a href="#"><img class="h-12 w-12" src="../assets/cover.jpg" alt="cover image"/></a>
 			<div class="ml-3">
@@ -7,7 +8,7 @@
 					<span>Shape of You</span>
 					<a href="#"
 						><svg
-							class="h-4 w-4 ml-2 text-gray-500 fill-current hover:text-white"
+							class="h-4 w-4 ml-2 text-gray-500 fill-current hover:text-white focus:text-green-700"
 							viewBox="0 -28 512.001 512"
 							xmlns="http://www.w3.org/2000/svg"
 						>
@@ -16,14 +17,140 @@
 							/></svg
 					></a>
 				</div>
-				<a href="#" class="text-xs text-gray-500 hover:underline hover:text-white"
+				<a
+					href="#"
+					class="text-xs text-gray-500 hover:underline hover:text-white focus:text-green-700"
 					>Ed Sheeran</a
 				>
 			</div>
+		</div>
+		<!-- Player section -->
+		<div @click="random == false" class=" flex flex-col">
+			<div class="flex justify-center">
+				<button
+					@click="random = !random"
+					class="focus:outline-none  relative"
+					:class="{
+						'text-gray-500': !random,
+						'text-green-700': random,
+						'hover:text-white': !random,
+						'hover:text-green-500': random,
+					}"
+				>
+					<svg
+						class="w-4 h-4 fill-current mr-2 mb-1"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 20 20"
+					>
+						<path
+							d="M6.59 12.83L4.4 15c-.58.58-1.59 1-2.4 1H0v-2h2c.29 0 .8-.2 1-.41l2.17-2.18 1.42 1.42zM16 4V1l4 4-4 4V6h-2c-.29 0-.8.2-1 .41l-2.17 2.18L9.4 7.17 11.6 5c.58-.58 1.59-1 2.41-1h2zm0 10v-3l4 4-4 4v-3h-2c-.82 0-1.83-.42-2.41-1l-8.6-8.59C2.8 6.21 2.3 6 2 6H0V4h2c.82 0 1.83.42 2.41 1l8.6 8.59c.2.2.7.41.99.41h2z"
+						/>
+					</svg>
+					<div
+						v-if="random"
+						class="w-1 h-1 bg-green-700 rounded-full justify-center ml-1 absolute"
+					></div>
+				</button>
+				<button
+					class="focus:outline-none text-gray-500 hover:text-white focus:text-white"
+				>
+					<svg
+						class="w-4 h-4 fill-current mx-2 mb-1"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 20 20"
+					>
+						<path d="M4 5h3v10H4V5zm12 0v10l-9-5 9-5z" />
+					</svg>
+				</button>
+				<button
+					@click="isOpen = !isOpen"
+					class="focus:outline-none text-gray-500 hover:text-white focus:text-white"
+				>
+					<svg
+						v-if="!isOpen"
+						class="w-8 h-8 fill-current mx-2 mb-1"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 20 20"
+					>
+						<path
+							d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM7 6l8 4-8 4V6z"
+						/>
+					</svg>
+					<svg
+						v-if="isOpen"
+						class="w-8 h-8 fill-current mx-2 mb-1"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 20 20"
+					>
+						<path
+							d="M2.93 17.07A10 10 0 1 1 17.07 2.93 10 10 0 0 1 2.93 17.07zm12.73-1.41A8 8 0 1 0 4.34 4.34a8 8 0 0 0 11.32 11.32zM7 6h2v8H7V6zm4 0h2v8h-2V6z"
+						/>
+					</svg>
+				</button>
+				<button
+					class="focus:outline-none text-gray-500 hover:text-white focus:text-white"
+				>
+					<svg
+						class="w-4 h-4 fill-current mx-2 mb-1"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 20 20"
+					>
+						<path d="M13 5h3v10h-3V5zM4 5l9 5-9 5V5z" />
+					</svg>
+				</button>
+				<button
+					@click="repeat = !repeat"
+					class="focus:outline-none relative"
+					:class="{
+						'text-gray-500': !repeat,
+						'text-green-700': repeat,
+						'hover:text-white': !repeat,
+						'hover:text-green-500': repeat,
+					}"
+				>
+					<svg
+						class="w-4 h-4 fill-current mx-2"
+						xmlns="http://www.w3.org/2000/svg"
+						viewBox="0 0 20 20"
+					>
+						<path
+							d="M10 3v2a5 5 0 0 0-3.54 8.54l-1.41 1.41A7 7 0 0 1 10 3zm4.95 2.05A7 7 0 0 1 10 17v-2a5 5 0 0 0 3.54-8.54l1.41-1.41zM10 20l-4-4 4-4v8zm0-12V0l4 4-4 4z"
+						/>
+					</svg>
+					<div
+						v-if="repeat"
+						class="w-1 h-1 bg-green-700 rounded-full justify-center ml-4 mt-1 absolute"
+					></div>
+				</button>
+			</div>
+			<!-- Music bar -->
+			<div class="flex items-center justify-center ml-2">
+				<span class="text-xs text-gray-500">1:20</span>
+				<div
+					class="bg-gray-500 rounded w-112 h-1 mx-2 hover:bg-white cursor-pointer"
+				></div>
+				<span class="text-xs text-gray-500">3:20</span>
+			</div>
+		</div>
+		<!-- Volume section -->
+		<div class="text-gray-500 text-right">
+			<svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+				<path
+					d="M45.799 9.364a2.406 2.406 0 00-2.405-.007L1.215 33.458a2.41 2.41 0 001.195 4.503h42.179a2.41 2.41 0 002.41-2.41V11.449a2.408 2.408 0 00-1.2-2.085zM42.18 33.141h-7.231V19.734l7.231-4.132v17.539z"
+				/>
+			</svg>
 		</div>
 	</div>
 </template>
 
 <script>
-export default {};
+export default {
+	data() {
+		return {
+			isOpen: false,
+			random: false,
+			repeat: false,
+		};
+	},
+};
 </script>
