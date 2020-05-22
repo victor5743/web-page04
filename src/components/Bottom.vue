@@ -133,10 +133,42 @@
 			</div>
 		</div>
 		<!-- Volume section -->
-		<div class="text-gray-500 text-right">
-			<svg class="fill-current" xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+		<div class="text-gray-500 text-right flex items-center mr-2">
+			<svg
+				class="fill-current h-4 w-4 hover:text-white cursor-pointer"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 20 20"
+			>
 				<path
-					d="M45.799 9.364a2.406 2.406 0 00-2.405-.007L1.215 33.458a2.41 2.41 0 001.195 4.503h42.179a2.41 2.41 0 002.41-2.41V11.449a2.408 2.408 0 00-1.2-2.085zM42.18 33.141h-7.231V19.734l7.231-4.132v17.539z"
+					d="M17 6V5h-2V2H3v14h5v4h3.25H11a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6zm-5.75 14H3a2 2 0 0 1-2-2V2c0-1.1.9-2 2-2h12a2 2 0 0 1 2 2v4a2 2 0 0 1 2 2v10a2 2 0 0 1-2 2h-5.75zM11 8v8h6V8h-6zm3 11a1 1 0 1 0 0-2 1 1 0 0 0 0 2z"
+				/>
+			</svg>
+			<svg
+				class="fill-current h-4 w-4 mx-2 hover:text-white cursor-pointer"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 20 20"
+			>
+				<path
+					d="M16 17a3 3 0 0 1-3 3h-2a3 3 0 0 1 0-6h2a3 3 0 0 1 1 .17V1l6-1v4l-4 .67V17zM0 3h12v2H0V3zm0 4h12v2H0V7zm0 4h12v2H0v-2zm0 4h6v2H0v-2z"
+				/>
+			</svg>
+			<svg
+				class="fill-current h-4 w-4 hover:text-white cursor-pointer"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 20 20"
+			>
+				<path
+					d="M5 7H1v6h4l5 5V2L5 7zm11.36 9.36l-1.41-1.41a6.98 6.98 0 0 0 0-9.9l1.41-1.41a8.97 8.97 0 0 1 0 12.72zm-2.82-2.82l-1.42-1.42a3 3 0 0 0 0-4.24l1.42-1.42a4.98 4.98 0 0 1 0 7.08z"
+				/>
+			</svg>
+			<div class="bg-gray-500 rounded w-12 h-1 mx-2 hover:bg-white cursor-pointer"></div>
+			<svg
+				class="fill-current h-4 w-4 hover:text-white cursor-pointer"
+				xmlns="http://www.w3.org/2000/svg"
+				viewBox="0 0 20 20"
+			>
+				<path
+					d="M2.8 15.8L0 13v7h7l-2.8-2.8 4.34-4.32-1.42-1.42L2.8 15.8zM17.2 4.2L20 7V0h-7l2.8 2.8-4.34 4.32 1.42 1.42L17.2 4.2zm-1.4 13L13 20h7v-7l-2.8 2.8-4.32-4.34-1.42 1.42 4.33 4.33zM4.2 2.8L7 0H0v7l2.8-2.8 4.32 4.34 1.42-1.42L4.2 2.8z"
 				/>
 			</svg>
 		</div>
