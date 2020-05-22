@@ -25,7 +25,7 @@
 			</div>
 		</div>
 		<!-- Player section -->
-		<div @click="random == false" class=" flex flex-col">
+		<div class=" flex flex-col">
 			<div class="flex justify-center">
 				<button
 					@click="random = !random"
