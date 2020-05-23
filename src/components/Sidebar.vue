@@ -10,7 +10,7 @@
 		</div>
 
 		<!-- Music Options -->
-		<div class="overflow-y-auto">
+		<div class="overflow-y-auto spotify-sidebar">
 			<!-- Library -->
 			<div class="px-4 mt-2">
 				<h3 class="uppercase tracking-widest text-gray-500 text-xs">Your Library</h3>
@@ -102,3 +102,29 @@ export default {
 	},
 };
 </script>
+
+<style>
+.spotify-sidebar::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+.spotify-sidebar::-webkit-scrollbar-thumb {
+	background: #646464;
+	border-radius: 4px;
+}
+
+.spotify-sidebar::-webkit-scrollbar-thumb:active {
+	background-color: #646464;
+}
+
+.spotify-sidebar::-webkit-scrollbar-thumb:hover {
+	background: #757575;
+	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.spotify-sidebar::-webkit-scrollbar-track {
+	background: #bababa;
+	border-radius: 4px;
+}
+</style>

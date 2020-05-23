@@ -1,24 +1,14 @@
 # web-page04
 
-## Project setup
-```
-npm install
-```
+Building Spotify website using:
 
-### Compiles and hot-reloads for development
-```
-npm run serve
-```
+- Vue JS
+- Tailwind CSS
 
-### Compiles and minifies for production
-```
-npm run build
-```
+Note: The UI interface is not responsive.
 
-### Lints and fixes files
-```
-npm run lint
-```
+## Application preview:
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+<p align="center"> 
+  <img src="./src/assets/preview.jpg" /> 
+</p>

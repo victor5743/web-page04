@@ -2,7 +2,9 @@
 	<div class="flex-none h-16 px-4 flex items-center justify-between">
 		<!-- Song section -->
 		<div class="flex items-center">
-			<a href="#"><img class="h-12 w-12" src="../assets/cover.jpg" alt="cover image"/></a>
+			<a href="#"
+				><img class="h-12 w-12" src="../assets/cover1.jpg" alt="cover image"
+			/></a>
 			<div class="ml-3">
 				<div class="flex items-center">
 					<span>Shape of You</span>

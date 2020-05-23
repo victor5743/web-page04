@@ -71,12 +71,99 @@
 			</div>
 		</div>
 		<!-- Content Section -->
-		<div class="overflow-y-auto p-4">
-			CONTENT
+		<div class="overflow-y-auto p-4 mx-4 my-6 spotify-content">
+			<h2 class="text-3xl font-semibold text-white">Home</h2>
+			<!-- Recently Played Section -->
+			<div class="mt-10">
+				<h3 class="font-semibold text-sm border-b border-gray-700 pb-2">
+					Recently Played
+				</h3>
+				<!-- Card component -->
+				<div class="flex -mx-2">
+					<div class="w-1/4" v-for="(item, index) in content" :key="item.id">
+						<Card :content="content[index]" />
+					</div>
+				</div>
+			</div>
+
+			<!-- Your heavy rotation -->
+			<div class="mt-10">
+				<h3 class="font-semibold text-sm border-b border-gray-700 pb-2">
+					Your heavy rotation
+				</h3>
+				<!-- Card component -->
+				<div class="flex -mx-2">
+					<div class="w-1/4" v-for="(item, index) in content" :key="item.id">
+						<Card :content="content[index]" />
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </template>
 
 <script>
-export default {};
+import Card from './Card.vue';
+
+export default {
+	data() {
+		return {
+			content: [
+				{
+					title: 'Acoustics Pop Covers',
+					description: 'Amazing Acoustic Covers',
+					followers: '6,811 FOLLOWERS',
+					img: 'cover1.jpg',
+				},
+				{
+					title: 'Acoustics Christmas',
+					description: 'Christmas Music',
+					followers: '292,145 FOLLOWERS',
+					img: 'cover2.jpg',
+				},
+				{
+					title: 'Happy Pop Hits',
+					description: 'Amazing Pop Hits',
+					followers: '21,687 FOLLOWERS',
+					img: 'cover3.jpg',
+				},
+				{
+					title: 'Clasical Christmas',
+					description: 'Christmas Music',
+					followers: '561,149 FOLLOWERS',
+					img: 'cover4.jpg',
+				},
+			],
+		};
+	},
+	components: {
+		Card,
+	},
+};
 </script>
+
+<style scoped>
+.spotify-content::-webkit-scrollbar {
+	width: 8px;
+	height: 8px;
+}
+
+.spotify-content::-webkit-scrollbar-thumb {
+	background: #646464;
+	border-radius: 4px;
+}
+
+.spotify-content::-webkit-scrollbar-thumb:active {
+	background-color: #646464;
+}
+
+.spotify-content::-webkit-scrollbar-thumb:hover {
+	background: #757575;
+	box-shadow: 0 0 2px 1px rgba(0, 0, 0, 0.2);
+}
+
+.spotify-content::-webkit-scrollbar-track {
+	background: #bababa;
+	border-radius: 4px;
+}
+</style>
